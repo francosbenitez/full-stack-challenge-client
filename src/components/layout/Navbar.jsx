@@ -42,7 +42,7 @@ const Navbar = () => {
                             </span>
                             <span>
                                 <button className="lg:mx-4 bg-primary border-2 border-primary border-opacity-100 hover:bg-background text-background hover:text-primary font-bold py-2 px-4 rounded">
-                                    Sign out
+                                    Sign Out
                                 </button>
                             </span>
                         </li>
