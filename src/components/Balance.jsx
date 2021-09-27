@@ -15,22 +15,22 @@ const Balance = () => {
                     <table class="w-full">
                         <thead>
                             <tr class="bg-white">
-                                <th class="pl-2 pt-1 pb-1 border border-indigo-300">#</th>
-                                <th class="pl-2 pt-1 pb-1 border border-indigo-300">Concept</th>
-                                <th class="pl-2 pt-1 pb-1 border border-indigo-300">Amount</th>
-                                <th class="pl-2 pt-1 pb-1 border border-indigo-300">Date</th>
-                                <th class="pl-2 pt-1 pb-1 border border-indigo-300">Category</th>
-                                <th class="pl-2 pt-1 pb-1 border border-indigo-300">Type</th>
+                                <th class="p-1 border border-text">#</th>
+                                <th class="p-1 border border-text">Concept</th>
+                                <th class="p-1 border border-text">Amount</th>
+                                <th class="p-1 border border-text">Date</th>
+                                <th class="p-1 border border-text">Category</th>
+                                <th class="p-1 border border-text">Type</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             <tr class="bg-white">
-                            <td class="pl-2 pt-1 pb-1 border border-indigo-300" tableHeadData="#">1</td>
-                            <td class="pl-2 pt-1 pb-1 border border-indigo-300" tableHeadData="Concept">Concept 1</td>
-                            <td class="pl-2 pt-1 pb-1 border border-indigo-300" tableHeadData="Amount">Amount 1</td>
-                            <td class="pl-2 pt-1 pb-1 border border-indigo-300" tableHeadData="Date">Date 1</td>
-                            <td class="pl-2 pt-1 pb-1 border border-indigo-300" tableHeadData="Category">Category 1</td>
-                            <td class="pl-2 pt-1 pb-1 border border-indigo-300" tableHeadData="Type">Type 1</td>
+                            <td class="p-1 border border-text" tableHeadData="#">1</td>
+                            <td class="p-1 border border-text" tableHeadData="Concept">Concept 1</td>
+                            <td class="p-1 border border-text" tableHeadData="Amount">Amount 1</td>
+                            <td class="p-1 border border-text" tableHeadData="Date">Date 1</td>
+                            <td class="p-1 border border-text" tableHeadData="Category">Category 1</td>
+                            <td class="p-1 border border-text" tableHeadData="Type">Type 1</td>
                             </tr>
                         </tbody>
                     </table>
