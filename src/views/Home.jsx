@@ -17,16 +17,6 @@ const Home = () => {
     })
     const [operations, setOperations] = useState([]);
     const [listUpdated, setListUpdated] = useState(false)
-    // const baseUrl = "http://localhost:5000/operation/getOperations"
-    // const fetchData = (url) => {
-    //   fetch(url)
-    //   .then(response => response.json())
-    //   .then(data => setOperations(data))
-    //   .catch(error => console.log(error))
-    // };
-    // useEffect(() => {
-    //   fetchData(baseUrl);
-    // }, [])
     useEffect(() => {
         const getOperations = () => {
             fetch('http://localhost:5000/operation/getOperations')
@@ -36,15 +26,13 @@ const Home = () => {
         getOperations()
         setListUpdated(false)
     }, [listUpdated])
-
-    const [modal, setModal] = useState(false);
     return (
         <>
             <Navbar />
             <Add />
             <Balance />
             <List operation={operation} setOperation={setOperation} operations={operations} setListUpdated={setListUpdated}/>
-            <Form modal={modal} setModal={setModal} operation={operation} setOperation={setOperation} />
+            <Form operation={operation} setOperation={setOperation} />
             <Footer />
         </>
     );
