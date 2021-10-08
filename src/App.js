@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <Router>
-        {/*<Home />*/}
         <Route path="/" exact={true} component={Home} />
         <Route path="/add" exact={true} component={Add} />
         <Route path="/update/:id" exact={true} component={Update} />
