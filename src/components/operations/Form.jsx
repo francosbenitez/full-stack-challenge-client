@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Form = ({operation, setOperation}) => {
     const handleChange = e => {
@@ -27,26 +28,25 @@ const Form = ({operation, setOperation}) => {
         })
     }
     return ( 
-        <div className="m-10 flex justify-center">
-            <form onSubmit={handleSubmit} className="mb-20">
-                <div className="flex flex-wrap -mx-3 mb-2">
-                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <div className="w-full flex justify-center">
+            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <div className="mb-4">
                         <label htmlFor="concept" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Concept</label>
                         <input value={concept} name="concept" onChange={handleChange} type="text" id="concept" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Concept" />
                     </div>
-                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <div className="mb-4">
                         <label htmlFor="amount" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Amount
                         </label>
                         <input value={amount} name="amount" onChange={handleChange} type="number" id="amount" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="1000" />
                     </div>
-                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <div className="mb-4">
                         <label htmlFor="date" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Date
                         </label>
                         <input value={date} name="date" onChange={handleChange} type="date" id="date" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                     </div>
-                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <div className="mb-4">
                         <label htmlFor="category" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Category
                         </label>
@@ -61,7 +61,7 @@ const Form = ({operation, setOperation}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <div className="mb-4">
                         <label htmlFor="type" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Type
                         </label>
@@ -76,15 +76,24 @@ const Form = ({operation, setOperation}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center items-center">
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Create
+                        </button>
+                        <Link to="/" style={{backgroundImage: 'none'}}>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Cancel
+                            </button>
+                        </Link>
+                    </div>
+                    {/*<div className="flex flex-col justify-center items-center">
                         <button
                             type="submit"
-                            className="bg-primary p-3 rounded-md text-background transform shadow-lg hover:bg-primary hover:scale-110 duration-200"
+                            className="lg:mx-4 bg-background border-2 border-primary border-opacity-100 hover:bg-primary text-primary hover:text-background font-bold py-2 px-4 rounded"
                         >
                             Create
                         </button>
-                    </div>
-                </div>
+                    </div>*/}
             </form>
         </div>
     );

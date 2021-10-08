@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer"
 import Add from "../components/operations/Add"
 import Balance from "../components/operations/Balance"
 import List from "../components/operations/List"
-import Form from "../components/operations/Form"
+//import Form from "../components/operations/Form"
 
 const Home = () => {
     const [operation, setOperation] = useState({
@@ -31,8 +31,8 @@ const Home = () => {
             <Navbar />
             <Add />
             <Balance />
-            <List operation={operation} setOperation={setOperation} operations={operations} setListUpdated={setListUpdated}/>
-            <Form operation={operation} setOperation={setOperation} />
+            <List operation={operation} setOperation={setOperation} operations={operations} setListUpdated={setListUpdated} />
+            {/*<Form operation={operation} setOperation={setOperation} />*/}
             <Footer />
         </>
     );

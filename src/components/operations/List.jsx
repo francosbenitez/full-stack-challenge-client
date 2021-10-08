@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import moment from "moment";
+import { Link } from 'react-router-dom'
 
 const List = ({operation, setOperation, operations, setListUpdated}) => {
     const handleDelete = id => {
@@ -59,7 +60,10 @@ const List = ({operation, setOperation, operations, setListUpdated}) => {
                                     <td className="p-1 border border-text" tableheaddata="Category">{operation.category}</td>
                                     <td className="p-1 border border-text" tableheaddata="Type">{operation.type}</td>
                                     <td className="p-1 border border-text">
-                                        <button onClick={() => handleUpdate(operation.operation_id)} className="mr-1 px-3 bg-green-400"><FontAwesomeIcon icon={faEdit}/></button>
+                                        <Link to={`/update/${operation.operation_id}`} style={{backgroundImage: 'none'}}>
+                                            <button className="mr-1 px-3 bg-green-400"><FontAwesomeIcon icon={faEdit}/></button>
+                                            {/*<button onClick={() => handleUpdate(operation.operation_id)} className="mr-1 px-3 bg-green-400"><FontAwesomeIcon icon={faEdit}/></button>*/}
+                                        </Link>
                                         <button onClick={() => handleDelete(operation.operation_id)}  className="ml-1 px-3 bg-red-400"><FontAwesomeIcon icon={faTrashAlt}/></button>
                                     </td>
                                 </tr>
