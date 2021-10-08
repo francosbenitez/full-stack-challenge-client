@@ -1,13 +1,8 @@
 import React, {useState} from 'react';
-//import Form from "../components/operations/Form"
 import { useHistory, Link } from 'react-router-dom';
 
-const Update = ({operations, setListUpdated}) => {
-    //const location = useLocation()
-    //console.log(location.pathname)
+const Update = ({setListUpdated}) => {
     const history = useHistory()
-    //console.log(history.location.pathname)
-
     const [operation, setOperation] = useState({
         concept: "", 
         amount: "",

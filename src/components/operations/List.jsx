@@ -1,10 +1,21 @@
-import React from "react";
+import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import moment from "moment";
 import { Link } from 'react-router-dom'
 
-const List = ({operations, setListUpdated}) => {
+const List = () => {
+    const [operations, setOperations] = useState([]);
+    const [listUpdated, setListUpdated] = useState(false)
+    useEffect(() => {
+        const getOperations = () => {
+            fetch('http://localhost:5000/operation/getOperations')
+            .then(res => res.json())
+            .then(res => setOperations(res))
+        }
+        getOperations()
+        setListUpdated(false)
+    }, [listUpdated])
     const handleDelete = id => {
         const requestInit = {
             method: 'DELETE'
