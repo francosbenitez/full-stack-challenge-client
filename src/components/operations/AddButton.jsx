@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const Add = () => {
+const AddButton = () => {
   return (
     <div className="flex flex-col items-center justify-center px-5 m-auto mt-20 text-center lg:w-2/3">
         <Link to="/add" style={{backgroundImage: 'none'}}>
@@ -13,4 +13,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default AddButton;

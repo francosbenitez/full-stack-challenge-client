@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from "../components/layout/Navbar"
 import Footer from "../components/layout/Footer"
-import Add from "../components/operations/Add"
+import AddButton from "../components/operations/AddButton"
 import Balance from "../components/operations/Balance"
 import List from "../components/operations/List"
 
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <Add />
+            <AddButton />
             <Balance />
             <List />
             <Footer />
