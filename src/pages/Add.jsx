@@ -36,9 +36,8 @@ const Add = () => {
         })
     }
     return (
-        <div>
-            <p>Add</p>
-            <div className="w-full flex justify-center">
+        <>
+            <div className="mt-10 w-full flex justify-center">
                 <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">
                         <label htmlFor="concept" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Concept</label>
@@ -87,18 +86,18 @@ const Add = () => {
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <button type="submit" class="bg-primary border-2 border-primary border-opacity-100 hover:bg-background text-background hover:text-primary font-bold py-2 px-4 rounded">
                             Create
                         </button>
                         <Link to="/" style={{backgroundImage: 'none'}}>
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            <button class="bg-background border-2 border-primary border-opacity-100 hover:bg-primary text-primary hover:text-background font-bold py-2 px-4 rounded">
                                 Cancel
                             </button>
                         </Link>
                     </div>
                 </form>
             </div>
-        </div>
+        </>
     );
 };
 
