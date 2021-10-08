@@ -4,7 +4,7 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import moment from "moment";
 import { Link } from 'react-router-dom'
 
-const List = ({operation, setOperation, operations, setListUpdated}) => {
+const List = ({operations, setListUpdated}) => {
     const handleDelete = id => {
         const requestInit = {
             method: 'DELETE'
@@ -13,25 +13,6 @@ const List = ({operation, setOperation, operations, setListUpdated}) => {
         .then(res => res.text())
         .then(res => console.log(res))
         .catch(error => console.log(error))
-        setListUpdated(true)
-    }
-    const handleUpdate = id => {
-        const requestInit = {
-            method: "PUT",
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(operation)
-        }
-        fetch('http://localhost:5000/operation/update/' + id, requestInit)
-        .then(res => res.text())
-        .then(res => console.log(res))
-        setOperation({
-            concept: "", 
-            amount: "",
-            date: "",
-            category: "",
-            type: "",
-            user_id: ""
-        })
         setListUpdated(true)
     }
     return (
@@ -62,7 +43,6 @@ const List = ({operation, setOperation, operations, setListUpdated}) => {
                                     <td className="p-1 border border-text">
                                         <Link to={`/update/${operation.operation_id}`} style={{backgroundImage: 'none'}}>
                                             <button className="mr-1 px-3 bg-green-400"><FontAwesomeIcon icon={faEdit}/></button>
-                                            {/*<button onClick={() => handleUpdate(operation.operation_id)} className="mr-1 px-3 bg-green-400"><FontAwesomeIcon icon={faEdit}/></button>*/}
                                         </Link>
                                         <button onClick={() => handleDelete(operation.operation_id)}  className="ml-1 px-3 bg-red-400"><FontAwesomeIcon icon={faTrashAlt}/></button>
                                     </td>
