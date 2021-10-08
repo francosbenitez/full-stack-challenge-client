@@ -8,8 +8,15 @@ const List = () => {
     const [operations, setOperations] = useState([]);
     const [listUpdated, setListUpdated] = useState(false)
     useEffect(() => {
+        const userToken = window.localStorage.getItem("user-token");
         const getOperations = () => {
-            fetch('http://localhost:5000/operation/getOperations')
+            const requestInit = {
+                method: "get",
+                headers: {
+                    "user-token": userToken
+                }
+            }
+            fetch('http://localhost:5000/operation/getOperations', requestInit)
             .then(res => res.json())
             .then(res => setOperations(res))
         }

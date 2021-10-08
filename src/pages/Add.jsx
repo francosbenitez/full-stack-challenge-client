@@ -18,9 +18,13 @@ const Add = () => {
     }
     const {concept, amount, date, category, type } = operation
     const handleSubmit = () => {
+        const userToken = window.localStorage.getItem("user-token");
         const requestInit = {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                'Content-Type': 'application/json',
+                "user-token": userToken
+            },
             body: JSON.stringify(operation)
         }
         fetch('http://localhost:5000/operation/createOperation', requestInit)
@@ -89,7 +93,7 @@ const Add = () => {
                         <button type="submit" class="bg-primary border-2 border-primary border-opacity-100 hover:bg-background text-background hover:text-primary font-bold py-2 px-4 rounded">
                             Create
                         </button>
-                        <Link to="/" style={{backgroundImage: 'none'}}>
+                        <Link to="/home" style={{backgroundImage: 'none'}}>
                             <button class="bg-background border-2 border-primary border-opacity-100 hover:bg-primary text-primary hover:text-background font-bold py-2 px-4 rounded">
                                 Cancel
                             </button>

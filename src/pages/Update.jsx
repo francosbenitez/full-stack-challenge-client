@@ -19,9 +19,13 @@ const Update = ({setListUpdated}) => {
     }
     const {concept, amount, date, category, type } = operation
     const handleUpdate = () => {
+        const userToken = window.localStorage.getItem("user-token");
         const requestInit = {
             method: "PUT",
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                'Content-Type': 'application/json',
+                "user-token": userToken
+            },
             body: JSON.stringify(operation)
         }
         fetch(`http://localhost:5000/operation${history.location.pathname}`, requestInit)
@@ -91,7 +95,7 @@ const Update = ({setListUpdated}) => {
                         <button type="submit" className="bg-primary border-2 border-primary border-opacity-100 hover:bg-background text-background hover:text-primary font-bold py-2 px-4 rounded">
                             Update
                         </button>
-                        <Link to="/" style={{backgroundImage: 'none'}}>
+                        <Link to="/home" style={{backgroundImage: 'none'}}>
                             <button className="bg-background border-2 border-primary border-opacity-100 hover:bg-primary text-primary hover:text-background font-bold py-2 px-4 rounded">
                                 Cancel
                             </button>

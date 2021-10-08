@@ -13,7 +13,8 @@ const Login = () => {
         })
     }
     const {email, password } = user
-    const handleLogin = () => {
+    const handleLogin = (e) => {
+        e.preventDefault();
         const requestInit = {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
@@ -21,7 +22,12 @@ const Login = () => {
         }
         fetch("http://localhost:5000/user/login", requestInit)
         .then(res => res.text())
-        .then(res => console.log(res))
+        .then(res => {
+            let parse = JSON.parse(res)
+            window.localStorage.setItem("user-token", parse.success)
+            window.location.href = '/home';
+            console.log(window.localStorage.getItem("user-token"))
+        })
     };
     return (
         <>
