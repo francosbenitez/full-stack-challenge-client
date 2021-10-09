@@ -48,26 +48,26 @@ const Add = () => {
                     <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div className="mb-4">
                             <label htmlFor="concept" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Concept</label>
-                            <input value={concept} name="concept" onChange={handleChange} type="text" id="concept" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Concept" />
+                            <input value={concept} name="concept" onChange={handleChange} type="text" id="concept" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Concept" required />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="amount" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                 Amount
                             </label>
-                            <input value={amount} name="amount" onChange={handleChange} type="number" id="amount" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="1000" />
+                            <input value={amount} name="amount" onChange={handleChange} type="number" id="amount" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="1000" required />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="date" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                 Date
                             </label>
-                            <input value={date} name="date" onChange={handleChange} type="date" id="date" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                            <input value={date} name="date" onChange={handleChange} type="date" id="date" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="category" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                 Category
                             </label>
                             <div className="relative">
-                                <select value={category} name="category" onChange={handleChange} type="text" id="category" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                <select value={category} name="category" onChange={handleChange} type="text" id="category" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required>
                                     <option defaultValue hidden>Choose here</option>
                                     <option>Food</option>
                                     <option>Health</option>
@@ -82,7 +82,7 @@ const Add = () => {
                                 Type
                             </label>
                             <div className="relative">
-                                <select value={type} name="type" onChange={handleChange} type="type" id="type" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                <select value={type} name="type" onChange={handleChange} type="type" id="type" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required>
                                     <option defaultValue hidden>Choose here</option>
                                     <option>Income</option>
                                     <option>Expense</option>
