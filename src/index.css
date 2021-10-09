@@ -53,3 +53,15 @@ body {
 #menu-toggle:checked + #menu {
   display: block;
 }
+
+#wrapper {
+  width:500px;
+  height:500px;
+  margin:0 auto;
+  background: var(--background);
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-250px;
+  margin-top:-250px;
+}
