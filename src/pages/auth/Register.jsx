@@ -14,7 +14,8 @@ const Register = () => {
         })
     }
     const {email, password } = user
-    const handleRegister = () => {
+    const handleRegister = (e) => {
+        e.preventDefault();
         const requestInit = {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
@@ -22,7 +23,10 @@ const Register = () => {
         }
         fetch("http://localhost:5000/user/createUser", requestInit)
         .then(res => res.text())
-        .then(res => console.log(res))
+        .then(res => {
+            window.location.href = '/login';
+            console.log(res)
+        })
     };
     return (
         <>

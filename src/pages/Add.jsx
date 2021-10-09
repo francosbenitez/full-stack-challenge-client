@@ -31,7 +31,10 @@ const Add = () => {
         }
         fetch('http://localhost:5000/operation/createOperation', requestInit)
         .then(res => res.text())
-        .then(res => console.log(res))
+        .then(res => {
+            window.location.href = '/home';
+            console.log(res)
+        })
         setOperation({
             concept: "", 
             amount: "",

@@ -32,7 +32,10 @@ const Update = ({setListUpdated}) => {
         }
         fetch(`http://localhost:5000/operation${history.location.pathname}`, requestInit)
         .then(res => res.text())
-        .then(res => console.log(res))
+        .then(res => {
+            window.location.href = '/home';
+            console.log(res)
+        })
         setOperation({
             concept: "", 
             amount: "",
