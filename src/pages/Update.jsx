@@ -19,7 +19,8 @@ const Update = ({setListUpdated}) => {
         })
     }
     const {concept, amount, date, category, type } = operation
-    const handleUpdate = () => {
+    const handleUpdate = (e) => {
+        e.preventDefault();
         const userToken = window.localStorage.getItem("user-token");
         const requestInit = {
             method: "PUT",
@@ -70,7 +71,7 @@ const Update = ({setListUpdated}) => {
                             </label>
                             <div className="relative">
                                 <select value={category} name="category" onChange={handleChange} type="text" id="category" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required>
-                                    <option defaultValue hidden>Choose here</option>
+                                    <option value="" defaultValue hidden>Choose here</option>
                                     <option>Food</option>
                                     <option>Health</option>
                                 </select>
@@ -85,7 +86,7 @@ const Update = ({setListUpdated}) => {
                             </label>
                             <div className="relative">
                                 <select value={type} name="type" onChange={handleChange} type="type" id="type" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required>
-                                    <option defaultValue hidden>Choose here</option>
+                                    <option value="" defaultValue hidden>Choose here</option>
                                     <option>Income</option>
                                     <option>Expense</option>
                                 </select>

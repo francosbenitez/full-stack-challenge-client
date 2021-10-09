@@ -24,8 +24,12 @@ const List = () => {
         setListUpdated(false)
     }, [listUpdated])
     const handleDelete = id => {
+        const userToken = window.localStorage.getItem("user-token");
         const requestInit = {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                "user-token": userToken
+            }
         }
         fetch('http://localhost:5000/operation/delete/' + id, requestInit)
         .then(res => res.text())
