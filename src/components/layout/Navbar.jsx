@@ -19,7 +19,7 @@ const Navbar = () => {
                 <header className="px-10 md:px-32 flex justify-between flex-wrap items-center py-2 top-0 fixed w-screen z-10 bg-gray-50 border-b dark:border-darkergrey border-gray-200 dark:bg-black">
                     <div className="flex flex-row">
                         <h1 className="text-3xl font-bold">
-                            <a href="/" className="logo">
+                            <a href="/home" className="logo">
                                 Budget App
                             </a>
                         </h1>

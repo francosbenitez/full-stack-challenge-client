@@ -56,12 +56,13 @@ body {
 
 #wrapper {
   width:500px;
-  height:500px;
+  //height:1000px;
   margin:0 auto;
-  background: var(--background);
+  background:var(--background);
   position:absolute;
   left:50%;
   top:50%;
   margin-left:-250px;
   margin-top:-250px;
+  min-height: calc(100vh - 6.5rem);
 }
