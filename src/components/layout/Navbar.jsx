@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 const Navbar = () => {
     const history = useHistory()
@@ -55,9 +55,11 @@ const Navbar = () => {
                                         </a>
                                     </span>
                                     <span>
-                                        <button className="lg:mx-4 bg-primary border-2 border-primary border-opacity-100 hover:bg-background text-background hover:text-primary font-bold py-2 px-4 rounded">
-                                            Sign Out
-                                        </button>
+                                        <Link to="/" style={{backgroundImage: 'none'}}>
+                                            <button className="lg:mx-4 bg-primary border-2 border-primary border-opacity-100 hover:bg-background text-background hover:text-primary font-bold py-2 px-4 rounded">
+                                                Sign Out
+                                            </button>
+                                        </Link>
                                     </span>
                                 </li>
                             </ul>

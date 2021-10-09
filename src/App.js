@@ -8,6 +8,7 @@ import Login from "./pages/auth/Login"
 import Footer from "./components/layout/Footer"
 
 function App() {
+  document.title = "Budget App | Franco Sebastián Benítez";
   return (
     <>
       <Router>
