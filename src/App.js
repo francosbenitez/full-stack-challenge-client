@@ -3,8 +3,8 @@ import Home from "./pages/Home"
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import Add from "./pages/Add"
 import Update from "./pages/Update"
-import Register from "./pages/auth/Register"
-import Login from "./pages/auth/Login"
+import Register from "./pages/Register"
+import Login from "./pages/Login"
 import Footer from "./components/layout/Footer"
 import { UserContext } from "./UserContext"
 import React, { useState, useMemo } from "react";

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, {useState} from 'react';
-import Navbar from "../../components/layout/Navbar"
+import Navbar from "../components/layout/Navbar"
 
 const Login = () => {
     const [user, setUser] = useState({
