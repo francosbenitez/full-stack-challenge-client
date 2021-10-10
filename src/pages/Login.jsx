@@ -26,8 +26,9 @@ const Login = () => {
         .then(res => {
             let parse = JSON.parse(res)
             window.localStorage.setItem("user-token", parse.success)
+            window.localStorage.setItem("id", parse.id)
             window.location.href = '/home';
-            console.log(window.localStorage.getItem("user-token"))
+            console.log(window.localStorage.getItem("id"), window.localStorage.getItem("user-token"))
         })
     };
     return (
